@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Shopping Cart</title>
+        <meta charset="UTF-8">
+        <link href="style.css" rel="stylesheet" type="text/css">
+        
+        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+        
+        <script src="https://kit.fontawesome.com/1b4e907a2e.js"></script>
+    </head>
+    <body>
+        <header></header>
+        <main>
+                <div id="container">
+                <div style="display: flex;flex-direction: row; justify-content: space-between;">
+                    <h1>Shopping Bag</h1>
+                    <div class="container2">
+                        <div class="modal-container">
+                            <div class="modal">
+                                <div class="close-icon">
+                                    <!-- button --> 
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                        <line x1="18" y1="6" x2="6" y2="18" />
+                                        <line x1="6" y1="6" x2="18" y2="18" />
+                                    </svg>
+                                </div>
+                                
+                                <img  src="data:image/jpeg;base64,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" style="width: 65px; height: 65px; ; ">
+                                <h2 class="total" ></h2>
+                                 
+                        </div>
+                        </div>
+                
+                        <button class="cta-button"  >The total amount</button>
+                    </div>
+                </div>
+                </div>
+                    <div id="products">
+                        <div class="product product-1">
+                            <div class="icons">
+                                    <i class="far fa-heart fa-2x"></i>
+                                    <i class="far fa-times-circle fa-2x icon-1"></i>
+                            </div>
+                            <div class="item img-container">   
+                                    <img src="https://tn.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/16/8564/1.jpg?7277" alt="" class="image" style="border-radius: 10px;">
+                                    <div class="overlay">
+                                            <div class="text">XIAOMI Mi True Wireless Earbuds Basic 2 _______ Black</div>
+                                            
+                                    </div>                       
+                            </div>
+                            <div class="item item-1">
+                                <button class="minus-btn">-</button>
+                                <input type="text" class="qte qte-1">
+                                <button class="plus-btn">+</button>
+                            </div>
+                            <div class="item price-1" style="font-size: 25px ;">                       
+                            </div>
+                        </div>
+                        <div class="product product-2">
+                                <div class="icons">
+                                        <i class="far fa-heart fa-2x"></i>
+                                        <i class="far fa-times-circle fa-2x icon-2"></i>
+                                </div>
+                            <div class="item img-container">
+                                <img src="https://tn.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/27/0064/1.jpg?2571" alt="" class="image" style="border-radius: 10px;">
+                                <div class="overlay">
+                                        <div class="text">Hummel Basket Homme -HML NEO _______ Black</div>
+                                </div> 
+                            </div>
+                            <div class="item item-2">
+                                <button class="minus-btn">-</button>
+                                <input type="text" class="qte qte-2">
+                                <button class="plus-btn">+</button>
+                            </div>
+                            <div class="item price-2" style="font-size: 25px ">                           
+                            </div>
+                        </div>
+                        <div class="product product-3">
+                                <div class="icons">
+                                        <i class="far fa-heart fa-2x"></i>
+                                        <i class="far fa-times-circle fa-2x icon-3"></i>
+                                </div>
+                            <div class="item img-container">
+                                <img src="https://tn.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/11/9203/1.jpg?1269" alt=""  class="image" style="border-radius: 10px;" >
+                                <div class="overlay">
+                                        <div class="text">Sweat à capuche Unisexe _______ Black</div>
+                                </div> 
+                            </div>
+                            <div class="item item-3">
+                                <button class="minus-btn">-</button>
+                                <input type="text" class="qte qte-3">
+                                <button class="plus-btn">+</button>
+                            </div>
+                            <div class="item price-3" style="font-size: 25px ">                           
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </main>
+        <footer></footer>
+        <script type="text/javascript" src="script.js"></script> 
+    </body>
+</html>
